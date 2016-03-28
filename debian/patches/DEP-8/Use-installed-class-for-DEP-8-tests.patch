@@ -1,0 +1,20 @@
+From: =?utf-8?q?David_Pr=C3=A9vot?= <david@tilapin.org>
+Date: Mon, 1 Feb 2016 19:19:04 -0400
+Subject: Use installed class for DEP-8 tests
+
+---
+ tests/bootstrap.php | 1 -
+ 1 file changed, 1 deletion(-)
+
+diff --git a/tests/bootstrap.php b/tests/bootstrap.php
+index 35a696c..fe3c157 100644
+--- a/tests/bootstrap.php
++++ b/tests/bootstrap.php
+@@ -10,7 +10,6 @@ define('HAMCREST_TEST_BASE', realpath(dirname(__FILE__)));
+ define('HAMCREST_BASE', realpath(dirname(dirname(__FILE__))));
+ 
+ set_include_path(implode(PATH_SEPARATOR, array(
+-    HAMCREST_TEST_BASE,
+     HAMCREST_BASE . '/hamcrest',
+     get_include_path()
+ )));

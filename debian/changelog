@@ -1,0 +1,12 @@
+php-hamcrest (1.2.2-1ubuntu1) xenial; urgency=medium
+
+  * debian/patches/backport-c2aecc21.patch: Fix hexadecimal string
+    change in PHP7.  Closes LP: #1563116.
+
+ -- Nishanth Aravamudan <nish.aravamudan@canonical.com>  Mon, 28 Mar 2016 16:52:41 -0700
+
+php-hamcrest (1.2.2-1) unstable; urgency=low
+
+  * Initial release (php-mockery dependency)
+
+ -- David Prévot <taffit@debian.org>  Mon, 01 Feb 2016 20:34:59 -0400

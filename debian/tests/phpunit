@@ -1,0 +1,11 @@
+#! /bin/sh
+mkdir --parents vendor
+phpab \
+	--template debian/autoload.php.tpl \
+	--output vendor/autoload.php \
+	tests generator
+patch -p1 < debian/patches/DEP-8/Use-installed-class-for-DEP-8-tests.patch
+phpunit --configuration tests/phpunit.xml.dist
+exit=$?
+patch -Rp1 < debian/patches/DEP-8/Use-installed-class-for-DEP-8-tests.patch
+exit $exit
